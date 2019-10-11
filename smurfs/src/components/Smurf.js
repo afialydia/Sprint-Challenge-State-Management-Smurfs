@@ -1,9 +1,18 @@
 import React from 'react';
+import styled from 'styled-components'
+
+const Divy = styled.div`
+width: 150px;
+height: 150px;
+border: 1px solid;
+`
 
 export const Smurf = props => {
     return(
-        <div key={props.id}>
+        <Divy key={props.id}>
             <h3>{props.name}</h3>
-        </div>
+            <p>{props.age}</p>
+            <p>{props.height}</p>
+        </Divy>
     )
 }
