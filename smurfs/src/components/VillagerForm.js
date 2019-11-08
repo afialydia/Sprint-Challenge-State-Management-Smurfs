@@ -37,12 +37,11 @@ class VillagerForm extends React.Component {
 
 	render() {
 		return (
-			<div className="form">
+			<div >
 				<h2>Welcome New Villager</h2>
-				<span>Please give us this info...</span>
 
-				<form onSubmit={this.handleSubmit}>
-					<FormInput
+				<form className="form" onSubmit={this.handleSubmit}>
+					<div><FormInput
 						name="name"
 						type="text"
 						handleChange={this.handleChange}
@@ -65,7 +64,7 @@ class VillagerForm extends React.Component {
 						handleChange={this.handleChange}
 						label="height"
 						required
-					/>
+					/></div>
 					<div >
                         <button className="button" type="submit" 
                         // onClick={()=>this.props.newvillager()}

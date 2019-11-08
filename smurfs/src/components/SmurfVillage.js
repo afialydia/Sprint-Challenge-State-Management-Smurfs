@@ -11,7 +11,7 @@ const SmurfVillage = ({ villagers }) => {
 	console.log("howdyfromVillage", villagers);
 	return (
 		<div>
-			howdyfromVillage meet our villagers:
+			<h3>Meet our Villagers:</h3>
 			<div className="village">{villagers.map(villager => (
 				<Smurf
 					key={villager.id}

@@ -1,6 +1,14 @@
 *{
     box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+
 }
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'McLaren', cursive;
+}
+
+
 .village{
     width: 85%;
     height: 60vh;
@@ -12,13 +20,16 @@
     color:rgb(120,90,134,.8);
     align-content: space-around;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .house{
+    color: rgb(188, 70, 40);
     width: 150px;
     height: 150px;
-    border: solid;
+    border: solid rgb(120,90,134,.8);
     border-radius: 80%;
+    box-shadow: 0 12px 16px 0 rgba(188,70,40,0.24),
 
 }
 
@@ -40,6 +51,8 @@
 	margin: 1.5%;
 	width: 43%;
     background: RGB(188, 70, 40, 0.7);
+    font-family: 'McLaren', cursive;
+
     
 }
 
@@ -53,6 +66,9 @@
     font-size: 14px;
     margin: 2%;
     color: #EDE6DE;
+    border-radius: 90%;
+    height:auto;
+    width: auto;
   }
   .button:hover {
     box-shadow: 0 12px 16px 0 rgba(188,70,40,0.24),
