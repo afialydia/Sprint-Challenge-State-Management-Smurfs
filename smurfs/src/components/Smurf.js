@@ -10,7 +10,7 @@ import './components.css'
         
             <h3>{props.name}</h3>
             <p>Age: {props.age}</p>
-            <p>Height:{props.height}</p>
+            <p>Height: {props.height}</p>
         </div>
     )
 }

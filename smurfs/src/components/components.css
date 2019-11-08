@@ -27,7 +27,8 @@ h1,h2,h3,h4,h5,h6{
     color: rgb(188, 70, 40);
     width: 150px;
     height: 150px;
-    border: solid rgb(120,90,134,.8);
+    background: rgb(108,164,247);
+    border: solid .5px rgb(120,90,134,.8);
     border-radius: 80%;
     box-shadow: 0 12px 16px 0 rgba(188,70,40,0.24),
 

@@ -6,6 +6,7 @@ import { selectSmurf } from "../redux/get-smurf/smurf.selector";
 import FormInput from "./FormInput";
 import { isInteger } from "formik";
 import './components.css'
+import getAPI from "../redux/get-smurf/smurf.actions";
 
 class VillagerForm extends React.Component {
 	constructor(props) {
@@ -18,12 +19,23 @@ class VillagerForm extends React.Component {
                 height: "",
         	
 		};
-	}
+    }
+    
+    componentDidUpdate(){
+        this.props.welcome()
+    }
 
 	handleSubmit = e => {
         e.preventDefault();
         console.log(this.state)
-		this.props.newvillager(this.state)
+        this.props.newvillager(this.state)
+        this.setState({
+            
+				name: "",
+				age: isInteger,
+                height: "",
+        	
+        })
 
 	
 	};
@@ -81,7 +93,8 @@ const mapStateToProps = createStructuredSelector({
 });
 
 const mapDispatchToProps = dispatch => ({
-	newvillager: villager => dispatch(postToAPI(villager))
+    newvillager: villager => dispatch(postToAPI(villager)),
+    welcome: villager => dispatch(getAPI(villager))
 });
 
 export default connect(
