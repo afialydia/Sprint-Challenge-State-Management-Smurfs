@@ -1,8 +1,8 @@
 import { createSelector } from "reselect";
 
-const getAPI = state => state.smurf.users;
+const getAPI = state => state.smurf;
 
 export const selectSmurf = createSelector(
 	[getAPI],
-	smurfs => smurfs
+	smurfs => smurfs.villagers
 );

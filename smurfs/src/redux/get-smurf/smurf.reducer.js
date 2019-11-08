@@ -1,7 +1,7 @@
 import { SmurfActions } from "./smurf.types";
 
 const initialState = {
-	users: [],
+	villagers: [],
 	isFetching: false,
 	fetched: false,
 	error: ""
@@ -20,7 +20,7 @@ const smurfReducer = (state = initialState, action) => {
 				...state,
 				isFetching: false,
 				fetched:true,
-				users: action.payload,
+				villagers: action.payload,
 				error: ""
 			};
 		case SmurfActions.GET_FAIL:
