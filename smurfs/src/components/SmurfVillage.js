@@ -5,12 +5,14 @@ import { createStructuredSelector } from "reselect";
 import { selectSmurf } from "../redux/get-smurf/smurf.selector";
 import Smurf from "./Smurf";
 
+import './components.css'
+
 const SmurfVillage = ({ villagers }) => {
 	console.log("howdyfromVillage", villagers);
 	return (
 		<div>
 			howdyfromVillage meet our villagers:
-			{villagers.map(villager => (
+			<div className="village">{villagers.map(villager => (
 				<Smurf
 					key={villager.id}
 					name={villager.name}
@@ -18,7 +20,7 @@ const SmurfVillage = ({ villagers }) => {
 					height={villager.height}
 				/>
 			))}
-		</div>
+		</div></div>
 	);
 };
 

@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { selectSmurf } from "../redux/get-smurf/smurf.selector";
 import FormInput from "./FormInput";
+import { isInteger } from "formik";
+import './components.css'
 
 class VillagerForm extends React.Component {
 	constructor(props) {
@@ -12,7 +14,7 @@ class VillagerForm extends React.Component {
 		this.state = {
 		
 				name: "",
-				age: "",
+				age: isInteger,
                 height: "",
         	
 		};
@@ -35,7 +37,7 @@ class VillagerForm extends React.Component {
 
 	render() {
 		return (
-			<div className="sign-in">
+			<div className="form">
 				<h2>Welcome New Villager</h2>
 				<span>Please give us this info...</span>
 
@@ -64,8 +66,8 @@ class VillagerForm extends React.Component {
 						label="height"
 						required
 					/>
-					<div className="buttons">
-                        <button type="submit" 
+					<div >
+                        <button className="button" type="submit" 
                         // onClick={()=>this.props.newvillager()}
                         >New Villager</button>
 					</div>

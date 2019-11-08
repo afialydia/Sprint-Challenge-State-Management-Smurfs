@@ -1,18 +1,11 @@
-import React from 'react';
+import React from "react";
+import "./components.css";
 
 const FormInput = ({ handleChange, label, ...otherProps }) => (
-  <div className='group'>
-    <input className='form-input' onChange={handleChange} {...otherProps} />
-    {label ? (
-      <label
-        // className={`${
-        //   otherProps.value.length ? 'shrink' : ''
-        // } form-input-label`}
-      >
-        {label}
-      </label>
-    ) : null}
-  </div>
+	<div className="group">
+			<h6>{label.toUpperCase()}</h6> <input className="input" onChange={handleChange} {...otherProps} />
+	
+	</div>
 );
 
 export default FormInput;

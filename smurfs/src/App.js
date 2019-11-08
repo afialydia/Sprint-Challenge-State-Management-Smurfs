@@ -1,19 +1,17 @@
-import React, { Component } from "react";
-import SmurfVillage from './components/Smurfs'
-import FormikNewSmurfs from './components/NewSmurfs'
-import "./App.css";
+import React from "react";
+import SmurfVillage from './components/SmurfVillage'
 import VillagerForm from "./components/VillagerForm";
-class App extends Component {
-  render() {
+
+import "./App.css";
+const App = () =>{
     return (
       <div className="App">
      howdy
      <SmurfVillage />
      <VillagerForm />
-        {/* <FormikNewSmurfs /> */}
       </div>
     );
   }
-}
+
 
 export default App;
