@@ -1,55 +1,25 @@
-import React, {useEffect} from 'react'
-import { connect } from 'react-redux'
-import { getSmurfs } from '../actions'
-import { Smurf } from './Smurf'
-import styled from 'styled-components'
+import React from "react";
+import {connect} from 'react-redux'
+import { createStructuredSelector } from 'reselect'
 
-const SmurfContainer = styled.div`
-display: flex;
-width: 80%;
-margin: 0 auto;`
+import { selectSmurf } from '../redux/get-smurf/smurf.selector'
+import Smurf from './Smurf'
 
-const Smurfs = props => {
-
-    useEffect(()=> {
-       props.getSmurfs();
-    },[]);
-    
-    // if (props.isFetching){
-    //     return <h2>now loading...</h2>
-    // }
-    return (
-        <div>
-
-            Hello From Smurf
-            { props.error && <p> {props.smurfState.error}</p>}
-
-            {console.log('hey look at me',props)}
-
-            <SmurfContainer>
-
-            {props.smurfState.map(smurf => (
-                <Smurf key={smurf.id} name={smurf.name} age={smurf.age} height={smurf.height} />
-            ))}
-            </SmurfContainer>
-          
-         
-          
+const SmurfVillage = ({villagers}) =>{
+    console.log('howdyfromVillage',villagers)
+    return(
+        <div>howdyfromVillage meet our villagers:
+            {villagers.map(villager=>(
+                <Smurf key={villager.id} name={villager.name} age={villager.age} height={villager.height} />
+                ))} 
         </div>
-      );
+    )
 }
 
-const mapStateToProps = state => {
-    
-    return{
-        smurfState: state.characterReducer.smurfState,
-        error: state.characterReducer.error,
-        isFetching: state.characterReducer.isFetching 
-    };
-};
+const mapStateToProps = createStructuredSelector({
+    villagers: selectSmurf
+  }) 
 
 export default connect(
-    mapStateToProps, { getSmurfs }
-)(Smurfs)
-
-// export default Smurfs
+	mapStateToProps,
+)(SmurfVillage);

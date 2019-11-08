@@ -7,7 +7,7 @@ height: 150px;
 border: 1px solid;
 `
 
-export const Smurf = props => {
+ const Smurf = props => {
     return(
         <Divy key={props.id}>
             <h3>{props.name}</h3>
@@ -16,3 +16,4 @@ export const Smurf = props => {
         </Divy>
     )
 }
+export default Smurf
