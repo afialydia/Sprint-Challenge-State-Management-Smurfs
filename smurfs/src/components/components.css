@@ -6,6 +6,7 @@
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'McLaren', cursive;
+    color:rgb(184,46,15)
 }
 
 
@@ -15,7 +16,7 @@ h1,h2,h3,h4,h5,h6{
     display:flex;
     flex-wrap:wrap;
     margin: 0 auto;
-    background: rgb(232,220,218);
+    background: rgb(158,215,201);
     box-shadow: 0px 2px 4px rgb(120,90,134,.8);
     color:rgb(120,90,134,.8);
     align-content: space-around;
@@ -24,7 +25,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .house{
-    color: rgb(188, 70, 40);
+    color: rgb(224,228,230);
     width: 150px;
     height: 150px;
     background: rgb(108,164,247);

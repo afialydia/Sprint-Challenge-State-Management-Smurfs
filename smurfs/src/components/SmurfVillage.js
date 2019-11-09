@@ -1,14 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import getAPI from "../redux/get-smurf/smurf.actions";
 
 import { selectSmurf } from "../redux/get-smurf/smurf.selector";
 import Smurf from "./Smurf";
 
 import './components.css'
 
-const SmurfVillage = ({ villagers }) => {
+const SmurfVillage = ({ villagers, welcome }) => {
 	console.log("howdyfromVillage", villagers);
+// console.log(welcome)
+	// useEffect(() => {
+	// 	welcome('working');
+	//  },[welcome]);
+	 
+
 	return (
 		<div>
 			<h3>Meet our Villagers:</h3>
@@ -28,4 +35,13 @@ const mapStateToProps = createStructuredSelector({
 	villagers: selectSmurf
 });
 
-export default connect(mapStateToProps)(SmurfVillage);
+const mapDispatchToProps = dispatch => ({
+	welcome: () => dispatch(getAPI())
+});
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(SmurfVillage);
+
+

@@ -19,8 +19,8 @@ const postReducer = (state = initialState, action) => {
 		case PostActions.POST_SUCCESS:
 			return {
 				...state,
-				addingUser: false,
-				addedUser: true,
+				addingVillager: false,
+				addedVillager: true,
 				villagers: action.payload.user,
 				error: ""
 			};
@@ -35,4 +35,4 @@ const postReducer = (state = initialState, action) => {
 	}
 };
 
-export default postReducer
+export default postReducer;
